@@ -5,9 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MoodMe.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MoodMe.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public IActionResult Index()
