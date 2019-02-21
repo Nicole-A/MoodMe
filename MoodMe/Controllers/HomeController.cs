@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace MoodMe.Controllers
 {
-    [Authorize]
+    
     public class HomeController : Controller
     {
         public IActionResult Index()
