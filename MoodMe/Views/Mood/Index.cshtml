@@ -7,9 +7,11 @@
 <h1>Welcome!</h1>
 <h2>How are you feeling?</h2>
 
-<ul>
-    @foreach (var mood in Model)
-    {
-        <li>@mood.Name</li>
-    }
-</ul>
+<select>
+    
+        @foreach (var mood in Model)
+        {
+        <option>@mood.Name</option>  
+        }
+    
+</select>
