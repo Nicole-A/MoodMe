@@ -6,39 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 using MoodMe.Data;
 using MoodMe.ViewModels;
 using MoodMe.Models;
-using Microsoft.AspNetCore.Identity;
-using MoodMe.Areas.Identity.Data;
 
 namespace MoodMe.Controllers
 {
     public class MoodController : Controller
     {
-        private readonly MoodMeContext _context;
-        private readonly UserManager<MoodMeUser> _userManager;
+        private readonly ApplicationDbContext context;
 
-        public MoodController(MoodMeContext context, UserManager<MoodMeUser> userManager)
+        public MoodController(ApplicationDbContext dbContext)
         {
-            _context = context;
-            _userManager = userManager;
+            context = dbContext;
         }
 
         public IActionResult Index()
         {
-            return View(_context.Moods.ToList());
+            return View(context.Moods.ToList());
         }
-
-        [HttpPost]
-        public IActionResult SubmitMood(Mood mood)
-        {
-           /* UserMoods userMoods = new UserMoods
-            {
-                MoodMeUser = User,
-                Mood = mood
-            }; */
-
-            /*_context.UserMoods.Add */
-            return Redirect("/Food");
-        } 
-
     }
 }
