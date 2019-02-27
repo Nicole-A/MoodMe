@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using MoodMe.Models;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace MoodMe.ViewModels
                 });
             }
         }
-        public SelectMood() { }
+
+       
     }
 }

@@ -15,6 +15,9 @@ namespace MoodMe.Models
             : base(options)
         {
         }
+        public DbSet<Mood> Moods { get; set; }
+        public DbSet<UserMoods> UserMoods { get; set; }
+        public DbSet<Food> Foods { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
