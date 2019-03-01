@@ -5,13 +5,27 @@
 
 
 <h1>Welcome!</h1>
+
+<br />
+
 <h2>How are you feeling?</h2>
 
+<br />
+
+
 <select>
-    
-        @foreach (var mood in Model)
-        {
-        <option>@mood.Name</option>  
-        }
-    
+
+    @foreach (var mood in Model)
+    {
+        <option>@mood.Name</option>
+    }
+
 </select>
+
+<br />
+<br />
+<br />
+
+<form asp-controller="Mood" asp-action="Submit" method="post">
+    <input type="submit" value="Submit" />
+</form>
