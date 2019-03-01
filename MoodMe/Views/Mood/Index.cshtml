@@ -12,20 +12,20 @@
 
 <br />
 
-
-<select>
-
-    @foreach (var mood in Model)
-    {
-        <option>@mood.Name</option>
-    }
-
-</select>
-
-<br />
-<br />
-<br />
-
 <form asp-controller="Mood" asp-action="Submit" method="post">
+    <select id="mood">
+
+        @foreach (var mood in Model)
+        {
+            <option>@mood.Name</option>
+        }
+
+    </select>
+
+
+    <br />
+    <br />
+    <br />
+
     <input type="submit" value="Submit" />
 </form>
