@@ -20,5 +20,11 @@ namespace MoodMe.Controllers
         {
             return View(context.Foods.ToList());
         }
+
+        [HttpPost]
+        public IActionResult Submit()
+        {
+            return Redirect("/Tableau");
+        }
     }
 }
