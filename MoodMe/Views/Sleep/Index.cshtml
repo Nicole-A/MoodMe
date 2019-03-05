@@ -1,0 +1,31 @@
+﻿@model List<MoodMe.Models.Sleep>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Welcome!</h1>
+
+<br />
+
+<h2>How many hours of sleep did you get?</h2>
+
+<br />
+
+<form asp-controller="Sleep" asp-action="Submit" method="post">
+    <select id="sleep">
+
+        @foreach (var sleep in Model)
+        {
+            <option>@sleep.Hours</option>
+        }
+
+    </select>
+
+
+    <br />
+    <br />
+    <br />
+
+    <input type="submit" value="Submit" />
+</form>

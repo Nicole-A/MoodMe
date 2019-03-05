@@ -4,7 +4,7 @@
 }
 
 
-<h1>Okay...</h1>
+<h1>Interesting...</h1>
 
 <br />
 <br />
@@ -13,19 +13,21 @@
 
 <br />
 
-<select>
 
-    @foreach (var food in Model)
-    {
-        <option>@food.Name</option>
-    }
+<form asp-controller="Food" asp-action="Submit" method="post">
+    <select id="food">
 
-</select>
+        @foreach (var food in Model)
+        {
+            <option>@food.Name</option>
+        }
 
-<br />
-<br />
-<br />
+    </select>
 
-<form>
+
+    <br />
+    <br />
+    <br />
+
     <input type="submit" value="Submit" />
 </form>

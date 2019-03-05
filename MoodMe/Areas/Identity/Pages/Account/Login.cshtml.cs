@@ -77,7 +77,7 @@ namespace MoodMe.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-                    return Redirect("/Mood/");
+                    return Redirect("/Sleep/");
                 }
                 if (result.RequiresTwoFactor)
                 {
