@@ -3,29 +3,30 @@
     ViewData["Title"] = "Index";
 }
 
-
-<h1>Welcome!</h1>
-
-<br />
-
-<h2>How many hours of sleep did you get?</h2>
-
-<br />
-
-<form asp-controller="Sleep" asp-action="Submit" method="post">
-    <select id="sleep">
-
-        @foreach (var sleep in Model)
-        {
-            <option>@sleep.Hours</option>
-        }
-
-    </select>
-
+<div class="text-center">
+    <h1 style="color:white">Welcome!</h1>
 
     <br />
-    <br />
+
+    <h2 style="color:lightslategrey">How many hours of sleep did you get?</h2>
+
     <br />
 
-    <input type="submit" value="Submit" />
-</form>
+    <form asp-controller="Sleep" asp-action="Submit" method="post">
+        <select id="sleep">
+
+            @foreach (var sleep in Model)
+            {
+                <option>@sleep.Hours</option>
+            }
+
+        </select>
+
+
+        <br />
+        <br />
+        <br />
+
+        <input class="btn btn-secondary" role="button" type="submit" value="Submit" />
+    </form>
+</div>

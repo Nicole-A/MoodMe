@@ -3,31 +3,32 @@
     ViewData["Title"] = "Index";
 }
 
-
-<h1>Interesting...</h1>
-
-<br />
-<br />
-
-<h2>What did you eat?</h2>
-
-<br />
-
-
-<form asp-controller="Food" asp-action="Submit" method="post">
-    <select id="food">
-
-        @foreach (var food in Model)
-        {
-            <option>@food.Name</option>
-        }
-
-    </select>
-
+<div class="text-center">
+    <h1 style="color:white">Interesting...</h1>
 
     <br />
     <br />
+
+    <h2 style="color:lightslategrey">What did you eat?</h2>
+
     <br />
 
-    <input type="submit" value="Submit" />
-</form>
+
+    <form asp-controller="Food" asp-action="Submit" method="post">
+        <select id="food">
+
+            @foreach (var food in Model)
+            {
+                <option>@food.Name</option>
+            }
+
+        </select>
+
+
+        <br />
+        <br />
+        <br />
+
+        <input class="btn btn-secondary" role="button" type="submit" value="Submit" />
+    </form>
+</div>
