@@ -24,8 +24,30 @@ namespace MoodMe.Controllers
         }
 
         [HttpPost]
-        public IActionResult Submit()
+        public IActionResult Submit(/*Sleep sleep*/)
         {
+            ////This is where we query off the database to see if an entry already exists or not
+            //Entry entry = context.entries.single(entry => entry.UserID == UserID && entry.Date == currentDate);
+
+            ////check if it exists
+            //if (entry = null)
+            //{
+            //    //since it doesn't exist, then we create it
+            //    Entry newEntry = new Entry
+            //    {
+            //        UserID = '',
+            //        Date = now(),
+            //        SleepID = sleep.ID
+            //    };
+
+            //    context.entries.add(newEntry);
+            //} else
+            //{
+            //    //since it's already created, we simply modify the existing one
+            //    entry.sleepid = sleep.sleepid;
+            //}
+
+            //context.SaveChanges();
             return Redirect("/Mood");
         }
     }

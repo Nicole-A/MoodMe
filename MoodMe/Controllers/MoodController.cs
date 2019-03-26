@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MoodMe.Data;
-using MoodMe.ViewModels;
 using MoodMe.Models;
 
 namespace MoodMe.Controllers
@@ -26,6 +25,7 @@ namespace MoodMe.Controllers
         [HttpPost]
         public IActionResult Submit()
         {
+
             return Redirect("/Food");
         }
     }
