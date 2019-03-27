@@ -1,4 +1,4 @@
-﻿@model List<MoodMe.Models.Sleep>
+﻿@model MoodMe.ViewModel.AddSleepViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -12,15 +12,12 @@
 
     <br />
 
+
     <form asp-controller="Sleep" asp-action="Submit" method="post">
-        <select id="sleep">
-
-            @foreach (var sleep in Model)
-            {
-                <option>@sleep.Hours</option>
-            }
-
-        </select>
+        <div class="form-group">
+     
+            <select asp-for="SleepId" asp-items="Model.Sleeps"></select>
+        </div>
 
 
         <br />

@@ -8,7 +8,7 @@ using MoodMe.Models;
 
 namespace MoodMe.Controllers
 {
-    public class MoodController : Controller
+    public class MoodController : Controller 
     {
         private readonly ApplicationDbContext context;
 
@@ -17,16 +17,15 @@ namespace MoodMe.Controllers
             context = dbContext;
         }
 
-        public IActionResult Index()
-        {
-            return View(context.Moods.ToList());
-        }
+        //public IActionResult Index()
+        //{
+        //    return View(context.Moods.ToList());
+        //}
 
         [HttpPost]
         public IActionResult Submit()
         {
-
-            return Redirect("/Food");
+            return View();
         }
     }
 }

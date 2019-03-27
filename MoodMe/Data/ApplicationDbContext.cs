@@ -12,7 +12,9 @@ namespace MoodMe.Data
         public DbSet<Mood> Moods { get; set; }
         public DbSet<Food> Foods { get; set; }
         public DbSet<Sleep> Sleeps { get; set; }
-        public DbSet<Entry> Entries { get; set; }
+        public DbSet<UserFood> UserFoods { get; set; }
+        public DbSet<UserMood> UserMoods { get; set; }
+        public DbSet<UserSleep> UserSleeps { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
