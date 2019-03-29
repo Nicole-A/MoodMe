@@ -26,8 +26,8 @@ namespace MoodMe.Controllers
 
         public IActionResult Index()
         {
-            AddSleepViewModel addSleepViewModel = new AddSleepViewModel(_context.Sleeps.ToList());
-            return View(addSleepViewModel);
+            SelectSleepViewModel selectSleepViewModel = new SelectSleepViewModel(_context.Sleeps.ToList());
+            return View(selectSleepViewModel);
         }
 
         [HttpPost]
@@ -42,6 +42,6 @@ namespace MoodMe.Controllers
             _context.UserSleeps.Add(userSleep);
             _context.SaveChanges();
             return Redirect("/Mood");
-        }
+        } 
     }
 }

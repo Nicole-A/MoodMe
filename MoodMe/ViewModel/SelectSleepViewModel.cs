@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MoodMe.ViewModel
 {
-    public class AddSleepViewModel
+    public class SelectSleepViewModel
     {
         public List<SelectListItem> Sleeps { get; set; }
 
@@ -15,7 +15,7 @@ namespace MoodMe.ViewModel
         public int SleepId { get; set; }
 
         
-        public AddSleepViewModel(IEnumerable<Sleep> sleeps)
+        public SelectSleepViewModel(IEnumerable<Sleep> sleeps)
         {
             Sleeps = new List<SelectListItem>();
 
@@ -29,6 +29,6 @@ namespace MoodMe.ViewModel
             }
         }
 
-        public AddSleepViewModel() { }
+        public SelectSleepViewModel() { }
     }
 }
