@@ -10,8 +10,6 @@ namespace MoodMe.ViewModel
     public class SelectSleepViewModel
     {
         public List<SelectListItem> Sleeps { get; set; }
-
-        public string Sleep { get; set; }
         public int SleepId { get; set; }
 
         
@@ -29,6 +27,6 @@ namespace MoodMe.ViewModel
             }
         }
 
-        public SelectSleepViewModel() { }
+        
     }
 }

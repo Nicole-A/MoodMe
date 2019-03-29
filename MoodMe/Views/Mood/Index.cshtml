@@ -1,4 +1,4 @@
-﻿@model List<MoodMe.Models.Mood>
+﻿@model MoodMe.ViewModel.SelectMoodViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -14,14 +14,10 @@
 
 
     <form asp-controller="Mood" asp-action="Submit" method="post">
-        <select id="mood">
+      <div class="form-group">
 
-            @foreach (var mood in Model)
-            {
-                <option>@mood.Name</option>
-            }
-
-        </select>
+          <select asp-for="MoodId" asp-items="Model.Moods"></select>
+      </div>
 
 
         <br />
