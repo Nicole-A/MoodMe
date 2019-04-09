@@ -10,6 +10,7 @@ namespace MoodMe.Controllers
     {
         public IActionResult Index()
         {
+
             return View();
         }
     }
